@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 
@@ -46,10 +45,47 @@
     <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
     <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
     <link rel="stylesheet" href="assets/vendors/nice-select/nice-select.html" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/agrion.css" />
     <link rel="stylesheet" href="assets/css/agrion-responsive.css" />
+    <style>
+/* Thêm CSS cho phần thông tin sản phẩm và sản phẩm của */
+.product-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+.product-info-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+.product-info-list li .info-icon {
+    width: 22px;
+    min-width: 22px;
+    text-align: center;
+    margin-right: 10px;
+    color: #5cb85c;
+    font-size: 18px;
+    margin-top: 2px;
+}
+.product-info-list li strong {
+    min-width: 300px;
+    display: inline-block;
+}
+@media (max-width: 575px) {
+    .product-info-list li strong {
+        min-width: 110px;
+        font-size: 15px;
+    }
+    .product-info-list li {
+        font-size: 15px;
+    }
+}
+</style>
 </head>
 
 <body class="custom-cursor">
@@ -358,12 +394,12 @@
                 <div class="row">
                     <div class="col-lg-6 col-xl-6">
                         <div class="product-details__img">
-                            <img src="assets/images/shop/product-details-img-1.jpg" alt="" />
+                            <img src="assets/images/shop/product-details-img-1.jpg" alt="Bánh cốm tươi" />
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-6">
                         <div class="product-details__top">
-                            <h3 class="product-details__title">Brown Bread <span>$23.00</span> </h3>
+                            <h3 class="product-details__title">Bánh cốm tươi <span>Liên hệ</span> </h3>
                         </div>
                         <div class="product-details__reveiw">
                             <i class="fa fa-star"></i>
@@ -371,38 +407,132 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
-                            <span>2 Customer Reviews</span>
+                            <span>2 đánh giá của khách hàng</span>
                         </div>
                         <div class="product-details__content">
-                            <p class="product-details__content-text1">Aliquam hendrerit a augue insuscipit. Etiam
-                                aliquam massa quis des mauris commodo venenatis ligula commodo leez sed blandit
-                                convallis dignissim onec vel pellentesque neque.</p>
-                            <p class="product-details__content-text2">REF. 4231/406 <br>
-                                Available in store</p>
+                            <!-- Thay thế phần thông tin sản phẩm, sản phẩm của và mô tả sản phẩm bằng tab Bootstrap -->
+<div class="product-details__content">
+    <ul class="nav nav-tabs" id="productTab" role="tablist" style="margin-bottom: 20px;">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="thongtin-tab" data-toggle="tab" href="#thongtin" role="tab" aria-controls="thongtin" aria-selected="true">
+                Thông tin sản phẩm
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="sanphamcu-tab" data-toggle="tab" href="#sanphamcu" role="tab" aria-controls="sanphamcu" aria-selected="false">
+                Sản phẩm của
+            </a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="mota-tab" data-toggle="tab" href="#mota" role="tab" aria-controls="mota" aria-selected="false">
+                Mô tả sản phẩm
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content" id="productTabContent">
+        <!-- Tab Thông tin sản phẩm -->
+        <div class="tab-pane fade show active" id="thongtin" role="tabpanel" aria-labelledby="thongtin-tab">
+            <ul class="product-info-list">
+                <li>
+                    <span class="info-icon"><i class="fas fa-link"></i></span>
+                    <strong>Mã Blockchain:</strong> 22B1F2E0983160DB6F7BB9F62F4DBB39
+                </li>
+                <li>
+                    <span class="info-icon"><i class="fas fa-barcode"></i></span>
+                    <strong>Mã sản phẩm:</strong> BCT02
+                </li>
+                <li>
+                    <span class="info-icon"><i class="fas fa-birthday-cake"></i></span>
+                    <strong>Tên sản phẩm:</strong> Bánh cốm tươi
+                </li>
+                <li>
+                    <span class="info-icon"><i class="fas fa-weight"></i></span>
+                    <strong>Trọng lượng/dung tích:</strong> -
+                </li>
+                <li>
+                    <span class="info-icon"><i class="fas fa-cube"></i></span>
+                    <strong>Đơn vị tính:</strong> chiếc
+                </li>
+                <li>
+                    <span class="info-icon"><i class="fas fa-box-open"></i></span>
+                    <strong>Quy cách đóng gói Túi:</strong> Sản phẩm được gói trong màng nilon PP, đựng trong hộp giấy 01 chiếc/1 hộp
+                </li>
+                <li>
+                    <span class="info-icon"><i class="fas fa-warehouse"></i></span>
+                    <strong>Hướng dẫn bảo quản sản phẩm:</strong> Để sản phẩm ở nơi thoáng mát, tránh ánh nắng chiếu trực tiếp.
+                </li>
+                <li>
+                    <span class="info-icon"><i class="fas fa-utensils"></i></span>
+                    <strong>Hướng dẫn sử dụng:</strong> Sản phẩm ăn liền.
+                </li>
+            </ul>
+        </div>
+        <!-- Tab Sản phẩm của -->
+        <div class="tab-pane fade" id="sanphamcu" role="tabpanel" aria-labelledby="sanphamcu-tab">
+            <ul class="product-info-list">
+                <li>
+                    <span class="info-icon"><i class="fas fa-industry"></i></span>
+                    <strong>Tên cơ sở sản xuất:</strong> Hợp tác xã làng nghề truyền thống cốm Mễ Trì
+                </li>
+                <li>
+                    <span class="info-icon"><i class="fas fa-map-marker-alt"></i></span>
+                    <strong>Địa chỉ:</strong> Số 46, ngõ 10 Đại Lộ Thăng Long, đường Mễ Trì Thượng, phường Mễ Trì, quận Nam Từ Liêm, thành phố Hà Nội, Việt Nam
+                </li>
+                <li>
+                    <span class="info-icon"><i class="fas fa-phone"></i></span>
+                    <strong>Điện thoại:</strong> 0979 078 286
+                </li>
+                <li>
+                    <span class="info-icon"><i class="fas fa-envelope"></i></span>
+                    <strong>Email:</strong> hoptacxacommetri2023@gmail.com
+                </li>
+                <li>
+                    <span class="info-icon"><i class="fas fa-user"></i></span>
+                    <strong>Người liên hệ:</strong> Ngô Thị Thức
+                </li>
+            </ul>
+        </div>
+        <!-- Tab Mô tả sản phẩm -->
+        <div class="tab-pane fade" id="mota" role="tabpanel" aria-labelledby="mota-tab">
+            <h4 class="product-description__title">Mô tả sản phẩm</h4>
+            <p class="product-description__text1">Bánh cốm tươi là đặc sản truyền thống của làng nghề Mễ Trì, được làm từ cốm non và đậu xanh, mang hương vị đặc trưng của Hà Nội. Sản phẩm đảm bảo vệ sinh an toàn thực phẩm, phù hợp làm quà biếu hoặc thưởng thức hàng ngày.</p>
+            <div class="product-description__list">
+                <ul class="list-unstyled">
+                    <li>
+                        <p><span class="icon-right-arrow"></span> Sản phẩm truyền thống, hương vị tự nhiên.</p>
+                    </li>
+                    <li>
+                        <p><span class="icon-right-arrow"></span> Đóng gói tiện lợi, phù hợp làm quà tặng.</p>
+                    </li>
+                    <li>
+                        <p><span class="icon-right-arrow"></span> Đảm bảo vệ sinh an toàn thực phẩm.</p>
+                    </li>
+                </ul>
+            </div>
+            <p class="product-description__tex2">Bánh cốm tươi nên được bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp để giữ được hương vị thơm ngon nhất.</p>
+        </div>
+    </div>
+</div>
                         </div>
-
                         <div class="product-details__quantity">
-                            <h3 class="product-details__quantity-title">Choose Quantity</h3>
+                            <h3 class="product-details__quantity-title">Chọn số lượng</h3>
                             <div class="quantity-box">
                                 <button type="button" class="sub"><i class="fa fa-minus"></i></button>
                                 <input type="number" id="1" value="1" />
                                 <button type="button" class="add"><i class="fa fa-plus"></i></button>
                             </div>
                         </div>
-
-
                         <div class="product-details__buttons">
                             <div class="product-details__buttons-1">
-                                <a href="cart.html" class="thm-btn">Add to Cart <i class="icon-right-arrow"></i></a>
+                                <a href="cart.html" class="thm-btn">Thêm vào giỏ hàng <i class="icon-right-arrow"></i></a>
                             </div>
                             <div class="product-details__buttons-2">
-                                <a href="product-details.html" class="thm-btn">Add to Wislist <i
-                                        class="icon-right-arrow"></i></a>
+                                <a href="product-details.html" class="thm-btn">Thêm vào yêu thích <i class="icon-right-arrow"></i></a>
                             </div>
                         </div>
                         <div class="product-details__social">
                             <div class="title">
-                                <h3>Share with Friends</h3>
+                                <h3>Chia sẻ với bạn bè</h3>
                             </div>
                             <div class="product-details__social-link">
                                 <a href="#"><span class="fab fa-twitter"></span></a>
@@ -418,34 +548,26 @@
         <!--Product Details End-->
 
         <!--Product Description Start-->
-        <section class="product-description">
+        <!-- <section class="product-description">
             <div class="container">
-                <h3 class="product-description__title">Description</h3>
-                <p class="product-description__text1">Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci
-                    phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have
-                    alteration in some injected or words which don't look even slightly believable. If you are going to
-                    use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrang hidden in the
-                    middle of text.</p>
+                <h3 class="product-description__title">Mô tả sản phẩm</h3>
+                <p class="product-description__text1">Bánh cốm tươi là đặc sản truyền thống của làng nghề Mễ Trì, được làm từ cốm non và đậu xanh, mang hương vị đặc trưng của Hà Nội. Sản phẩm đảm bảo vệ sinh an toàn thực phẩm, phù hợp làm quà biếu hoặc thưởng thức hàng ngày.</p>
                 <div class="product-description__list">
                     <ul class="list-unstyled">
                         <li>
-                            <p><span class="icon-right-arrow"></span> Nam at elit nec neque suscipit gravida.</p>
+                            <p><span class="icon-right-arrow"></span> Sản phẩm truyền thống, hương vị tự nhiên.</p>
                         </li>
                         <li>
-                            <p><span class="icon-right-arrow"></span> Aenean egestas orci eu maximus tincidunt.</p>
+                            <p><span class="icon-right-arrow"></span> Đóng gói tiện lợi, phù hợp làm quà tặng.</p>
                         </li>
                         <li>
-                            <p><span class="icon-right-arrow"></span> Curabitur vel turpis id tellus cursus laoreet.
-                            </p>
+                            <p><span class="icon-right-arrow"></span> Đảm bảo vệ sinh an toàn thực phẩm.</p>
                         </li>
                     </ul>
                 </div>
-                <p class="product-description__tex2">All the Lorem Ipsum generators on the Internet tend to repeat
-                    predefined chunks as necessary, making this the first true generator on the Internet. It uses a
-                    dictionary of over 200 Latin words, combined with a handful of model sentence structures, to
-                    generate Lorem Ipsum which looks reasonable. </p>
+                <p class="product-description__tex2">Bánh cốm tươi nên được bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp để giữ được hương vị thơm ngon nhất.</p>
             </div>
-        </section>
+        </section> -->
         <!--Product Description End-->
 
         <!--Review One Start-->
@@ -453,7 +575,7 @@
             <div class="container">
                 <div class="comments-area">
                     <div class="review-one__title">
-                        <h3>2 Reviews</h3>
+                        <h3>2 đánh giá</h3>
                     </div>
                     <!--Start Comment Box-->
                     <div class="comment-box">
@@ -466,7 +588,7 @@
                             <div class="review-one__content">
                                 <div class="review-one__content-top">
                                     <div class="info">
-                                        <h2>Kevin Martin <span>20 July, 2022 . 4:00 pm</span></h2>
+                                        <h2>Kevin Martin <span>20/07/2022 . 16:00</span></h2>
                                     </div>
                                     <div class="reply-btn">
                                         <i class="fa fa-star"></i>
@@ -478,11 +600,7 @@
                                 </div>
 
                                 <div class="review-one__content-bottom">
-                                    <p>It has survived not only five centuries, but also the leap into electronic
-                                        typesetting unchanged. It was popularised in the sheets containing lorem ipsum
-                                        is simply free text. Class aptent taciti sociosqu ad litora torquent per conubia
-                                        nostra, per inceptos himenaeos. Vestibulum sollicitudin varius mauris non
-                                        dignissim.</p>
+                                    <p>Bánh cốm rất ngon, vị truyền thống và đóng gói đẹp mắt. Sẽ tiếp tục ủng hộ!</p>
                                 </div>
                             </div>
                         </div>
@@ -500,7 +618,7 @@
                             <div class="review-one__content">
                                 <div class="review-one__content-top">
                                     <div class="info">
-                                        <h2>Sarah Albert <span>20 July, 2022 . 4:00 pm</span></h2>
+                                        <h2>Sarah Albert <span>20/07/2022 . 16:00</span></h2>
                                     </div>
                                     <div class="reply-btn">
                                         <i class="fa fa-star"></i>
@@ -512,11 +630,7 @@
                                 </div>
 
                                 <div class="review-one__content-bottom">
-                                    <p>It has survived not only five centuries, but also the leap into electronic
-                                        typesetting unchanged. It was popularised in the sheets containing lorem ipsum
-                                        is simply free text. Class aptent taciti sociosqu ad litora torquent per conubia
-                                        nostra, per inceptos himenaeos. Vestibulum sollicitudin varius mauris non
-                                        dignissim.</p>
+                                    <p>Sản phẩm chất lượng, giao hàng nhanh. Rất hài lòng với dịch vụ!</p>
                                 </div>
                             </div>
                         </div>
@@ -531,9 +645,9 @@
         <section class="review-form-one">
             <div class="container">
                 <div class="review-form-one__inner">
-                    <h3 class="review-form-one__title">Add a Review</h3>
+                    <h3 class="review-form-one__title">Thêm đánh giá</h3>
                     <div class="review-form-one__rate-box">
-                        <p class="review-form-one__rate-text">Rate this Product?</p>
+                        <p class="review-form-one__rate-text">Đánh giá sản phẩm?</p>
                         <div class="review-form-one__rate">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -542,31 +656,29 @@
                             <i class="fa fa-star"></i>
                         </div>
                     </div>
-                    <form action="https://pixydrops.com/agrionhtml/main-html/assets/inc/sendemail.php" class="review-form-one__form contact-form-validated"
-                        novalidate="novalidate">
+                    <form action="#" class="review-form-one__form contact-form-validated" novalidate="novalidate">
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="review-form-one__input-box text-message-box">
-                                    <textarea name="message" placeholder="Write a Comment"></textarea>
+                                    <textarea name="message" placeholder="Viết đánh giá của bạn"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xl-6 col-lg-6">
                                 <div class="review-form-one__input-box">
-                                    <input type="text" placeholder="Your Name" name="name">
+                                    <input type="text" placeholder="Tên của bạn" name="name">
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6">
                                 <div class="review-form-one__input-box">
-                                    <input type="email" placeholder="Email Address" name="email">
+                                    <input type="email" placeholder="Địa chỉ email" name="email">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xl-12">
-                                <button type="submit" class="thm-btn review-form-one__btn">Submit a Review <i
-                                        class="icon-right-arrow"></i></button>
+                                <button type="submit" class="thm-btn review-form-one__btn">Gửi đánh giá <i class="icon-right-arrow"></i></button>
                             </div>
                         </div>
                     </form>
@@ -803,6 +915,16 @@
 
     <!-- template js -->
     <script src="assets/js/agrion.js"></script>
+    <!-- Thêm script Bootstrap tab nếu cần (nếu chưa có) -->
+<script>
+    // Kích hoạt tab Bootstrap nếu dùng bản Bootstrap 4 trở lên
+    $(function () {
+        $('#productTab a').on('click', function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+    });
+</script>
 </body>
 
 
