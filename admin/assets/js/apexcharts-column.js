@@ -4,14 +4,14 @@
     /* basic column chart */
     const basicoptions = {
         series: [{
-            name: 'Net Profit',
-            data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+            name: 'Vùng',
+            data: [3]
         }, {
-            name: 'Revenue',
-            data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+            name: 'Khu',
+            data: [2]
         }, {
-            name: 'Free Cash Flow',
-            data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+            name: 'Thửa',
+            data: [14]
         }],
         chart: {
             type: 'bar',
@@ -37,7 +37,7 @@
             colors: ['transparent']
         },
         xaxis: {
-            categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+            categories: ['THỐNG KÊ KHU VỰC SẢN XUẤT'],
             labels: {
                 show: true,
                 style: {
@@ -50,7 +50,158 @@
         },
         yaxis: {
             title: {
-                text: '$ (thousands)',
+                // text: '$ (thousands)',
+                style: {
+                    color: "#8c9097",
+                }
+            },
+            labels: {
+                show: true,
+                style: {
+                    colors: "#8c9097",
+                    fontSize: '11px',
+                    fontWeight: 600,
+                    cssClass: 'apexcharts-xaxis-label',
+                },
+            }
+        },
+        fill: {
+            opacity: 1
+        },
+        tooltip: {
+            y: {
+                formatter: function (val) {
+                    return "$ " + val + " thousands"
+                }
+            }
+        }
+    };
+
+    const basicoptions2 = {
+        series: [{
+            name: 'Đang sản xuất',
+            data: [15]
+        }, {
+            name: 'Đang thu hoạch',
+            data: [5]
+        }, {
+            name: 'Thu hoạch xong',
+            data: [21]
+        },
+        {
+            name: 'Hủy',
+            data: [3]
+        },],
+        chart: {
+            type: 'bar',
+            height: 320
+        },
+        plotOptions: {
+            bar: {
+                horizontal: false,
+                columnWidth: '80%',
+                endingShape: 'rounded'
+            },
+        },
+        grid: {
+            borderColor: '#f2f5f7',
+        },
+        dataLabels: {
+            enabled: false
+        },
+        colors: ["#985ffd", "#ff49cd", "#fdaf22", "#22fd3fff"],
+        stroke: {
+            show: true,
+            width: 2,
+            colors: ['transparent']
+        },
+        xaxis: {
+            categories: ['TRẠNG THÁI LÔ SẢN XUẤT'],
+            labels: {
+                show: true,
+                style: {
+                    colors: "#8c9097",
+                    fontSize: '11px',
+                    fontWeight: 600,
+                    cssClass: 'apexcharts-xaxis-label',
+                },
+            }
+        },
+        yaxis: {
+            title: {
+                // text: '$ (thousands)',
+                style: {
+                    color: "#8c9097",
+                }
+            },
+            labels: {
+                show: true,
+                style: {
+                    colors: "#8c9097",
+                    fontSize: '11px',
+                    fontWeight: 600,
+                    cssClass: 'apexcharts-xaxis-label',
+                },
+            }
+        },
+        fill: {
+            opacity: 1
+        },
+        tooltip: {
+            y: {
+                formatter: function (val) {
+                    return "$ " + val + " thousands"
+                }
+            }
+        }
+    };
+
+    const basicoptions3 = {
+        series: [{
+            name: 'Lệnh chưa duyệt',
+            data: [56]
+        }, {
+            name: 'Lệnh đã duyệt',
+            data: [98]
+        }],
+        chart: {
+            type: 'bar',
+            height: 320
+        },
+        plotOptions: {
+            bar: {
+                horizontal: false,
+                columnWidth: '80%',
+                endingShape: 'rounded'
+            },
+        },
+        grid: {
+            borderColor: '#f2f5f7',
+        },
+        dataLabels: {
+            enabled: false
+        },
+        colors: ["#f76b6bff", "#28ff89ff"],
+        stroke: {
+            show: true,
+            width: 2,
+            colors: ['transparent']
+        },
+        xaxis: {
+            categories: ['LỆNH SẢN XUẤT'],
+            labels: {
+                show: true,
+                style: {
+                    colors: "#8c9097",
+                    fontSize: '11px',
+                    fontWeight: 600,
+                    cssClass: 'apexcharts-xaxis-label',
+                },
+            }
+        },
+        yaxis: {
+            title: {
+                // text: '$ (thousands)',
                 style: {
                     color: "#8c9097",
                 }
@@ -77,7 +228,11 @@
         }
     };
     const basicchart = new ApexCharts(document.querySelector("#column-basic"), basicoptions);
+    const basicchart2 = new ApexCharts(document.querySelector("#column-basic2"), basicoptions2);
+    const basicchart3 = new ApexCharts(document.querySelector("#column-basic3"), basicoptions3);
     if(basicchart) basicchart.render();
+    if(basicchart2) basicchart2.render();
+    if(basicchart3) basicchart3.render();
 
     /* column chart with datalabels */
     const datalabelsoptions = {
