@@ -3163,13 +3163,14 @@ ul {
   position: relative;
   display: block;
   border-radius: var(--agrion-bdr-radius);
-  padding: 50px 49px 44px;
+  padding: 20px 19px 4px;
   background-color: rgb(255, 255, 255);
   border: 2px solid transparent;
   box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.05);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   margin-bottom: 30px;
+  height: 449.25px;
 }
 
 .services-one__single:hover {
@@ -4021,7 +4022,7 @@ ul {
   top: 0;
   left: 0;
   right: 0;
-  height: 600px;
+  height: 450px;
   background-color: var(--agrion-base);
   content: "";
   z-index: -1;
@@ -5579,7 +5580,7 @@ ul {
   display: block;
   float: left;
   width: 50%;
-  min-height: 705px;
+  /* min-height: 705px; */
 }
 
 .Provide-One__bg {
@@ -5670,7 +5671,7 @@ ul {
 
 .Provide-One__text {
   color: #9dbe91;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
 }
 
 .Provide-One__progress-wrap {
@@ -11925,4 +11926,10 @@ body.boxed-wrapper {
 
 .boxed-wrapper .main-header__phone-contact-box {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
 }
