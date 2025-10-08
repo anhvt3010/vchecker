@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 
@@ -45,47 +46,10 @@
     <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
     <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
     <link rel="stylesheet" href="assets/vendors/nice-select/nice-select.html" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/agrion.css" />
     <link rel="stylesheet" href="assets/css/agrion-responsive.css" />
-    <style>
-/* Thêm CSS cho phần thông tin sản phẩm và sản phẩm của */
-.product-info-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px 0;
-}
-.product-info-list li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 8px;
-    font-size: 16px;
-}
-.product-info-list li .info-icon {
-    width: 22px;
-    min-width: 22px;
-    text-align: center;
-    margin-right: 10px;
-    color: #5cb85c;
-    font-size: 18px;
-    margin-top: 2px;
-}
-.product-info-list li strong {
-    min-width: 300px;
-    display: inline-block;
-}
-@media (max-width: 575px) {
-    .product-info-list li strong {
-        min-width: 110px;
-        font-size: 15px;
-    }
-    .product-info-list li {
-        font-size: 15px;
-    }
-}
-</style>
 </head>
 
 <body class="custom-cursor">
@@ -232,12 +196,12 @@
                 <div class="row">
                     <div class="col-lg-6 col-xl-6">
                         <div class="product-details__img">
-                            <img src="https://cdn.tgdd.vn/Products/Images/8785/223317/bhx/khoai-lang-mat-202312251652039901.jpg" alt="Khoai lang mật" />
+                            <img src="assets/images/shop/product-details-img-1.jpg" alt="" />
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-6">
                         <div class="product-details__top">
-                            <h3 class="product-details__title">Khoai lang mật</h3>
+                            <h3 class="product-details__title">Brown Bread <span>$23.00</span> </h3>
                         </div>
                         <div class="product-details__reveiw">
                             <i class="fa fa-star"></i>
@@ -245,132 +209,38 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
-                            <span>2 đánh giá của khách hàng</span>
+                            <span>2 Customer Reviews</span>
                         </div>
                         <div class="product-details__content">
-                            <!-- Thay thế phần thông tin sản phẩm, sản phẩm của và mô tả sản phẩm bằng tab Bootstrap -->
-                        <div class="product-details__content">
-                            <ul class="nav nav-tabs" id="productTab" role="tablist" style="margin-bottom: 20px;">
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link active" id="thongtin-tab" data-toggle="tab" href="#thongtin" role="tab" aria-controls="thongtin" aria-selected="true">
-                                        Thông tin sản phẩm
-                                    </a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="sanphamcu-tab" data-toggle="tab" href="#sanphamcu" role="tab" aria-controls="sanphamcu" aria-selected="false">
-                                        Sản phẩm của
-                                    </a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="mota-tab" data-toggle="tab" href="#mota" role="tab" aria-controls="mota" aria-selected="false">
-                                        Mô tả sản phẩm
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="tab-content" id="productTabContent">
-                                <!-- Tab Thông tin sản phẩm -->
-                                <div class="tab-pane fade show active" id="thongtin" role="tabpanel" aria-labelledby="thongtin-tab">
-                                    <ul class="product-info-list">
-                                        <li>
-                                            <span class="info-icon"><i class="fas fa-link"></i></span>
-                                            <strong>Mã Blockchain:</strong> 22B1F2E0983160DB6F7BB9F62F4DBB39
-                                        </li>
-                                        <li>
-                                            <span class="info-icon"><i class="fas fa-barcode"></i></span>
-                                            <strong>Mã sản phẩm:</strong> BCT02
-                                        </li>
-                                        <li>
-                                            <span class="info-icon"><i class="fas fa-birthday-cake"></i></span>
-                                            <strong>Tên sản phẩm:</strong> Khoai lang mật
-                                        </li>
-                                        <li>
-                                            <span class="info-icon"><i class="fas fa-weight"></i></span>
-                                            <strong>Trọng lượng/dung tích:</strong> -
-                                        </li>
-                                        <li>
-                                            <span class="info-icon"><i class="fas fa-cube"></i></span>
-                                            <strong>Đơn vị tính:</strong> Ki-lô-gam
-                                        </li>
-                                        <li>
-                                            <span class="info-icon"><i class="fas fa-box-open"></i></span>
-                                            <strong>Quy cách đóng gói Túi:</strong> Sản phẩm được gói trong màng nilon PP, đựng trong túi 3kg/1 túi
-                                        </li>
-                                        <li>
-                                            <span class="info-icon"><i class="fas fa-warehouse"></i></span>
-                                            <strong>Hướng dẫn bảo quản sản phẩm:</strong> Để sản phẩm ở nơi thoáng mát, tránh ánh nắng chiếu trực tiếp.
-                                        </li>
-                                        <li>
-                                            <span class="info-icon"><i class="fas fa-utensils"></i></span>
-                                            <strong>Hướng dẫn sử dụng:</strong> Sản phẩm chế biến thành nhiều món.
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- Tab Sản phẩm của -->
-                                <div class="tab-pane fade" id="sanphamcu" role="tabpanel" aria-labelledby="sanphamcu-tab">
-                                    <ul class="product-info-list">
-                                        <li>
-                                            <span class="info-icon"><i class="fas fa-industry"></i></span>
-                                            <strong>Tên cơ sở sản xuất:</strong> Hợp tác xã làng nghề truyền thống Mễ Trì
-                                        </li>
-                                        <li>
-                                            <span class="info-icon"><i class="fas fa-map-marker-alt"></i></span>
-                                            <strong>Địa chỉ:</strong> Số 46, ngõ 10 Đại Lộ Thăng Long, đường Mễ Trì Thượng, phường Mễ Trì, quận Nam Từ Liêm, thành phố Hà Nội, Việt Nam
-                                        </li>
-                                        <li>
-                                            <span class="info-icon"><i class="fas fa-phone"></i></span>
-                                            <strong>Điện thoại:</strong> 0979 078 286
-                                        </li>
-                                        <li>
-                                            <span class="info-icon"><i class="fas fa-envelope"></i></span>
-                                            <strong>Email:</strong> hoptacxacommetri2023@gmail.com
-                                        </li>
-                                        <li>
-                                            <span class="info-icon"><i class="fas fa-user"></i></span>
-                                            <strong>Người liên hệ:</strong> Ngô Thị Thức
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- Tab Mô tả sản phẩm -->
-                                <div class="tab-pane fade" id="mota" role="tabpanel" aria-labelledby="mota-tab">
-                                    <h4 class="product-description__title">Mô tả sản phẩm</h4>
-                                    <p class="product-description__text1">Khoai lang mật là đặc sản truyền thống của làng nghề Mễ Trì, được làm từ cốm non và đậu xanh, mang hương vị đặc trưng của Hà Nội. Sản phẩm đảm bảo vệ sinh an toàn thực phẩm, phù hợp làm quà biếu hoặc thưởng thức hàng ngày.</p>
-                                    <div class="product-description__list">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <p><span class="icon-right-arrow"></span> Sản phẩm truyền thống, hương vị tự nhiên.</p>
-                                            </li>
-                                            <li>
-                                                <p><span class="icon-right-arrow"></span> Đóng gói tiện lợi, phù hợp làm quà tặng.</p>
-                                            </li>
-                                            <li>
-                                                <p><span class="icon-right-arrow"></span> Đảm bảo vệ sinh an toàn thực phẩm.</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <p class="product-description__tex2">Khoai lang mật nên được bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp để giữ được hương vị thơm ngon nhất.</p>
-                                </div>
-                            </div>
+                            <p class="product-details__content-text1">Aliquam hendrerit a augue insuscipit. Etiam
+                                aliquam massa quis des mauris commodo venenatis ligula commodo leez sed blandit
+                                convallis dignissim onec vel pellentesque neque.</p>
+                            <p class="product-details__content-text2">REF. 4231/406 <br>
+                                Available in store</p>
                         </div>
-                        </div>
-                        <!-- <div class="product-details__quantity">
-                            <h3 class="product-details__quantity-title">Chọn số lượng</h3>
+
+                        <div class="product-details__quantity">
+                            <h3 class="product-details__quantity-title">Choose Quantity</h3>
                             <div class="quantity-box">
                                 <button type="button" class="sub"><i class="fa fa-minus"></i></button>
                                 <input type="number" id="1" value="1" />
                                 <button type="button" class="add"><i class="fa fa-plus"></i></button>
                             </div>
                         </div>
+
+
                         <div class="product-details__buttons">
                             <div class="product-details__buttons-1">
-                                <a href="cart.html" class="thm-btn">Thêm vào giỏ hàng <i class="icon-right-arrow"></i></a>
+                                <a href="cart.html" class="thm-btn">Add to Cart <i class="icon-right-arrow"></i></a>
                             </div>
                             <div class="product-details__buttons-2">
-                                <a href="product-details.html" class="thm-btn">Thêm vào yêu thích <i class="icon-right-arrow"></i></a>
+                                <a href="product-details.html" class="thm-btn">Add to Wislist <i
+                                        class="icon-right-arrow"></i></a>
                             </div>
                         </div>
                         <div class="product-details__social">
                             <div class="title">
-                                <h3>Chia sẻ với bạn bè</h3>
+                                <h3>Share with Friends</h3>
                             </div>
                             <div class="product-details__social-link">
                                 <a href="#"><span class="fab fa-twitter"></span></a>
@@ -378,7 +248,7 @@
                                 <a href="#"><span class="fab fa-pinterest-p"></span></a>
                                 <a href="#"><span class="fab fa-instagram"></span></a>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -748,16 +618,6 @@
 
     <!-- template js -->
     <script src="assets/js/agrion.js"></script>
-    <!-- Thêm script Bootstrap tab nếu cần (nếu chưa có) -->
-<script>
-    // Kích hoạt tab Bootstrap nếu dùng bản Bootstrap 4 trở lên
-    $(function () {
-        $('#productTab a').on('click', function (e) {
-            e.preventDefault();
-            $(this).tab('show');
-        });
-    });
-</script>
 </body>
 
 
